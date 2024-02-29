@@ -1,0 +1,88 @@
+En este fichero de texto primero se explica cada comando utilizado y posteriormente se muetra en cada ítem todos los comandos utilizados para ese ítem.
+
+git clone URL -> Se utiliza para crear una copia local de un repositorio Git remoto.
+
+git add nombreArchivo -> Se utiliza para agregar cambios al área de preparación (staging area).
+
+git commit -m "comentario" -> Se utiliza para agregar los cambios que se encuentran en el staging area al historial de cambios del repositorio. Este comando permite con la opción -m añadir un mensaje, que es una descripción corta y significativa que explica los cambios realizados en el commit.
+
+git push nombreRemoto nombreRamaLocal -> Se utiliza para enviar los commits locales a un repositorio remoto. Esto se realiza cuando se quiere sincronizar los cambios del repositorio local con el repositorio remoto.
+
+git checkout nombreRama -> Sirve para cambiar entre ramas existentes dentro del repositorio.
+
+git checkout -b nombreNuevaRama -> Se utiliza para crear una nueva rama y cambiar a ella en un solo paso. Es una forma abreviada de los comandos git branch y git checkout.
+
+git merge nombreRamaAFusionar -> Se realiza para fusionar los cambios de una rama secundaria en una rama principal.
+
+git stash -> Sirve para guardar temporalmente los cambios locales que no estén listos para ser confirmados (staged) en un stash. Esto es útil cuando se está trabajando en una rama y se necesita cambiar rápidamente a otra rama o trabajar en un área diferente sin confirmar los cambios actuales.
+
+git stash pop -> Se utiliza para recuperar y aplicar los cambios almacenados en el stash más reciente y eliminarlos del stash después de aplicarlos.
+
+Comandos por ítems:
+
+	ÍTEM 1:
+	git clone https://github.com/ainhoasb/umafactorial.git
+
+	ÍTEM 3:
+	git add factorial.java
+	git commit -m "implementacion inicial"
+	
+	ÍTEM 4:
+	git add factorial.java
+	git commit -m "refactorizacion"
+
+	ÍTEM 5:
+	git push origin main
+	git checkout -b recursivo
+
+	ÍTEM 7:
+	git add factorial.java
+	git commit -m "implementacion recursiva"
+	git push origin recursivo
+
+	ÍTEM 8:
+	git checkout main
+
+	ÍTEM 10:
+	git add factorial.java
+	git commit -m "correccion numeros negativos"
+	git push origin main  //envie los cambios en master al repositorio GitHub
+
+	ÍTEM 11:
+	git checkout recursivo
+	git add factorial.java
+	git commit -m "optimizacion"
+	
+	ÍTEM 12:
+	git checkout main
+	git merge recursivo
+
+	ÍTEM 13:
+	git checkout -b refacIO
+
+	ÍTEM 14:
+	git add factorial.java
+	git commit -m "refactorizacion de metodo de entrada"
+
+	ÍTEM 15:
+	git stash
+	git checkout main
+
+	ÍTEM 16:
+	git add factorial.java
+	git commit -m "cambio de long a BigInteger"
+	git push origin main
+
+	git checkout refacIO
+	git stash pop
+	git add factorial.java
+	git commit -m "refactorizacion de metodo de salida"
+
+	ÍTEM 17:
+	git checkout main
+	git merge refacIO
+
+	ÍTEM 19:
+	git add factorial.java
+	git commit -m "mezcla de rama refacIO"
+	git push origin main
